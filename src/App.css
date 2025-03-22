@@ -1,0 +1,79 @@
+/* Background - Futuristic Neon Effect */
+body {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Center Container */
+.container {
+  text-align: center;
+  position: relative;
+}
+
+/* Glass Button with Neon Glow */
+.glass-button {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 40px;
+  font-size: 20px;
+  color: #00eaff;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 15px rgba(0, 234, 255, 0.5);
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Animation */
+.glass-button::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(0, 234, 255, 0.2) 0%, transparent 70%);
+  transition: all 0.6s ease-in-out;
+}
+
+.glass-button:hover::before {
+  top: 0;
+  left: 0;
+}
+
+/* Neon Glow Hover Effect */
+.glass-button:hover {
+  box-shadow: 0px 0px 30px rgba(0, 234, 255, 0.9);
+  transform: scale(1.1);
+  text-shadow: 0px 0px 10px rgba(0, 234, 255, 0.8);
+}
+
+/* Message with Animation */
+.message {
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #00eaff;
+  text-shadow: 0px 0px 15px rgba(0, 234, 255, 0.9);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
